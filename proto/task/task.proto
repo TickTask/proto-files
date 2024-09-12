@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package task;
+
+option go_package = "kkkivannn.tick_task.v1;rpcv1";
+
+service Task {
+
+}
+
