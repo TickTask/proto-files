@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package status;
+
+option go_package = "proto/gen/status;status";
+
+message StatusData {
+  int64  id = 1;
+  string status = 2;
+}

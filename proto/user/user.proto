@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package user;
 
-option go_package = "kkkivannn.tick_task.v1;rpcv1";
+option go_package = "proto/gen/user;user";
 
 service User {
   rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse);
@@ -12,6 +12,12 @@ service User {
   rpc GetUser (GetUserRequest) returns (GetUserResponse);
 
   rpc RefreshToken (RefreshTokenRequest) returns (RegisterUserResponse);
+}
+
+message UserData {
+  int64  user_id = 1;
+  string username = 2;
+  string login = 3;
 }
 
 message GetUserRequest {

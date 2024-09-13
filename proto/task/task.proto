@@ -2,9 +2,46 @@ syntax = "proto3";
 
 package task;
 
-option go_package = "kkkivannn.tick_task.v1;rpcv1";
+option go_package = "proto/gen/task;task";
+
+import "google/protobuf/timestamp.proto";
+import "user/user.proto";
+import "status/status.proto";
+import "google/protobuf/empty.proto";
 
 service Task {
+  rpc CreateTask(CreateTaskRequest) returns (CreateTaskResponse);
 
+  rpc GetTask(GetTaskRequest) returns (GetTaskResponse);
+
+  rpc DeleteTask(DeleteTaskRequest) returns (google.protobuf.Empty);
 }
 
+message CreateTaskRequest {
+  string title = 1;
+  optional string body = 2;
+  google.protobuf.Timestamp create_at = 3;
+  int64 user_id = 4;
+  int64 status_id = 5;
+}
+
+message CreateTaskResponse {
+  int64 task_id = 1;
+}
+
+message GetTaskRequest {
+  int64 task_id = 1;
+}
+
+message GetTaskResponse {
+  int64 task_id = 1;
+  string title = 2;
+  string body = 3;
+  google.protobuf.Timestamp create_at = 4;
+  user.UserData user_data = 5;
+  status.StatusData status_data = 6;
+}
+
+message DeleteTaskRequest {
+  int64 task_id = 1;
+}

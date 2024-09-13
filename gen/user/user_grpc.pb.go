@@ -4,7 +4,7 @@
 // - protoc             v5.27.3
 // source: user/user.proto
 
-package rpcv1
+package user
 
 import (
 	context "context"
