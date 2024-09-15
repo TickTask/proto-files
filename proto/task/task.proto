@@ -2,11 +2,11 @@ syntax = "proto3";
 
 package task;
 
-option go_package = "proto/gen/task;task";
+option go_package = "github.com/TickTask/proto-files/proto/task;task";
 
 import "google/protobuf/timestamp.proto";
-import "user/user.proto";
-import "status/status.proto";
+import "proto/user/user.proto";
+import "proto/status/status.proto";
 import "google/protobuf/empty.proto";
 
 service Task {

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/protos.iml" filepath="$PROJECT_DIR$/.idea/protos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/tick_task.iml" filepath="$PROJECT_DIR$/../.idea/tick_task.iml" />
     </modules>
   </component>
 </project>

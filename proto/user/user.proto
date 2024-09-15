@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package user;
 
-option go_package = "proto/gen/user;user";
+option go_package = "github.com/TickTask/proto-files/proto/user;user";
 
 service User {
   rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse);

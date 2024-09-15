@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package status;
 
-option go_package = "proto/gen/status;status";
+option go_package = "github.com/TickTask/proto-files/proto/status;status";
 
 message StatusData {
   int64  id = 1;
