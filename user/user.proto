@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package user;
 
-option go_package = "github.com/TickTask/proto-files/user;user";
+option go_package = "github.com/TickTask/proto-files/user";
 
 service User {
   rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse);
@@ -33,7 +33,7 @@ message GetUserResponse {
 message RegisterUserRequest {
   string login = 1;
   string username = 2 ;
-  string password_hash = 3;
+  string password = 3;
 }
 
 message RegisterUserResponse {
