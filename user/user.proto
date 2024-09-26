@@ -11,7 +11,7 @@ service User {
 
   rpc GetUser (GetUserRequest) returns (GetUserResponse);
 
-  rpc RefreshToken (RefreshTokenRequest) returns (RegisterUserResponse);
+  rpc RefreshToken (RefreshTokenRequest) returns (RefreshTokenResponse);
 }
 
 message UserData {
