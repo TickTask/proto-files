@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package task;
 
-option go_package = "github.com/TickTask/proto-files/task;task";
+option go_package = "github.com/TickTask/proto-files/task";
 
 import "google/protobuf/timestamp.proto";
 import "user/user.proto";
@@ -40,8 +40,8 @@ message GetTaskResponse {
   string title = 2;
   string body = 3;
   google.protobuf.Timestamp create_at = 4;
-  user.UserData user_data = 5;
-  status.StatusData status_data = 6;
+  user.UserData user = 5;
+  status.StatusData status = 6;
 }
 
 message DeleteTaskRequest {
