@@ -15,11 +15,13 @@ service Task {
   rpc GetTask(GetTaskRequest) returns (GetTaskResponse);
 
   rpc DeleteTask(DeleteTaskRequest) returns (google.protobuf.Empty);
+
+  rpc GetTasks(google.protobuf.Empty) returns (GetTasksResponse);
 }
 
 message CreateTaskRequest {
   string title = 1;
-  optional string body = 2;
+  string body = 2;
   google.protobuf.Timestamp create_at = 3;
   int64 user_id = 4;
   int64 status_id = 5;
@@ -44,4 +46,8 @@ message GetTaskResponse {
 
 message DeleteTaskRequest {
   int64 task_id = 1;
+}
+
+message GetTasksResponse {
+  repeated GetTaskResponse tasks = 1;
 }

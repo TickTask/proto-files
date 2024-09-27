@@ -4,6 +4,8 @@ package user;
 
 option go_package = "github.com/TickTask/proto-files/user;user";
 
+import "google/protobuf/empty.proto";
+
 service User {
   rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse);
 
@@ -11,7 +13,9 @@ service User {
 
   rpc GetUser (GetUserRequest) returns (GetUserResponse);
 
-  rpc RefreshToken (RefreshTokenRequest) returns (RegisterUserResponse);
+  rpc RefreshToken (RefreshTokenRequest) returns (RefreshTokenResponse);
+
+  rpc LogOut (google.protobuf.Empty) returns (google.protobuf.Empty);
 }
 
 message UserData {
