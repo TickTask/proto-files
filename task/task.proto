@@ -22,9 +22,6 @@ service Task {
 message CreateTaskRequest {
   string title = 1;
   string body = 2;
-  google.protobuf.Timestamp create_at = 3;
-  int64 user_id = 4;
-  int64 status_id = 5;
 }
 
 message CreateTaskResponse {
