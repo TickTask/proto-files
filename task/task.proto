@@ -21,7 +21,7 @@ service Task {
 
 message CreateTaskRequest {
   string title = 1;
-  string body = 2;
+  optional string body = 2;
 }
 
 message CreateTaskResponse {
@@ -35,7 +35,7 @@ message GetTaskRequest {
 message GetTaskResponse {
   int64 task_id = 1;
   string title = 2;
-  string body = 3;
+  optional string body = 3;
   google.protobuf.Timestamp create_at = 4;
   user.UserData user = 5;
   status.StatusData status = 6;

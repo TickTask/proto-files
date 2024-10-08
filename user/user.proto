@@ -13,6 +13,8 @@ service User {
 
   rpc GetUser (GetUserRequest) returns (GetUserResponse);
 
+  rpc EditUser (EditUserRequest) returns (EditUserResponse);
+
   rpc RefreshToken (RefreshTokenRequest) returns (RefreshTokenResponse);
 
   rpc LogOut (google.protobuf.Empty) returns (google.protobuf.Empty);
@@ -36,8 +38,9 @@ message GetUserResponse {
 
 message RegisterUserRequest {
   string login = 1;
-  string username = 2 ;
-  string password = 3;
+  string username = 2;
+  bytes  image_data = 3;
+  string password = 4;
 }
 
 message RegisterUserResponse {
@@ -62,4 +65,14 @@ message RefreshTokenRequest {
 message RefreshTokenResponse {
   string access_token = 1;
   string refresh_token = 2;
+}
+
+message EditUserRequest {
+  optional string login = 1;
+  optional string username = 2;
+  optional bytes image_data = 3;
+}
+
+message EditUserResponse {
+  string status = 1;
 }
