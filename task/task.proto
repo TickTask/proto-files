@@ -16,7 +16,7 @@ service Task {
 
   rpc DeleteTask(DeleteTaskRequest) returns (google.protobuf.Empty);
 
-  rpc GetTasks(google.protobuf.Empty) returns (GetTasksResponse);
+  rpc GetTasks(GetTasksRequest) returns (GetTasksResponse);
 }
 
 message CreateTaskRequest {
@@ -43,6 +43,10 @@ message GetTaskResponse {
 
 message DeleteTaskRequest {
   int64 task_id = 1;
+}
+
+message GetTasksRequest {
+  int64 user_id = 1;
 }
 
 message GetTasksResponse {

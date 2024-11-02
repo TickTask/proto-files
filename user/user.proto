@@ -40,7 +40,7 @@ message GetUserResponse {
 message RegisterUserRequest {
   string login = 1;
   string username = 2;
-  bytes  image_data = 3;
+  optional bytes  image_data = 3;
   string password = 4;
 }
 
